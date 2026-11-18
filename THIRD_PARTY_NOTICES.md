@@ -75,7 +75,7 @@ THE SOFTWARE.
 
 ## 组件骨架来源
 
-界面组件的部分写法以 [shadcn/ui](https://ui.shadcn.com)（MIT）为起点，经改写后与平台样式、状态和无障碍行为对齐；项目骨架沿用 Vite `react-ts` 模板的公开结构。业务逻辑、页面文案与样式由 hello-ctf.com 编写。
+界面组件的部分写法以 [shadcn/ui](https://ui.shadcn.com)（MIT）为起点，经改写后与平台样式、状态和无障碍行为对齐；项目骨架沿用 Vite `react-ts` 模板的公开结构。业务逻辑、页面文案与样式由探姬编写。
 
 ## 说明
 

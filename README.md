@@ -62,6 +62,6 @@ sudo bash ./palactf-install.sh \
 
 PalaCTF 为探姬（ProbiusOfficial）的专有软件。公开介绍和发布文件不意味着开源，也不授予使用、修改或再分发许可。第三方组件依其各自许可证授权；正式安装包随附相应声明及许可证正文。详见 [LICENSE](LICENSE)。
 
-作者：探姬（ProbiusOfficial） · [GitHub](https://github.com/ProbiusOfficial) · 主要作品 [hello-ctf.com](https://hello-ctf.com) · 联系 tjsec@qq.com
+作者：探姬（ProbiusOfficial） · [GitHub](https://github.com/ProbiusOfficial) · 联系 tjsec@qq.com
 
 © 2026 探姬（ProbiusOfficial）

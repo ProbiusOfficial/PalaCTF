@@ -1,11 +1,35 @@
-PalaCTF — proprietary software
+PALAESTRA — PROPRIETARY SOFTWARE
 
 Copyright (c) 2026 ProbiusOfficial (探姬). All rights reserved.
 
-This public repository contains product information, a front-end demonstration and release binaries. Publication does not grant any license to use, copy, modify, distribute, sublicense, or commercially exploit the proprietary software. Authorization requires written permission from the copyright holder. For authorization inquiries, contact tjsec@qq.com.
+This repository and its contents — source code, build artifacts, container
+images, database migrations, schemas, API definitions, user interface, and
+documentation — are proprietary software of ProbiusOfficial (探姬). All
+rights are reserved.
 
-Third-party components in release bundles remain subject to their own licenses. Their notices and license texts accompany the applicable release bundle.
+Publication of this repository does not grant any license, express or
+implied, by estoppel or otherwise, to use, copy, modify, distribute,
+sublicense, or commercially exploit any part of it. No open-source license
+applies to the proprietary portions of this product.
 
-Author: 探姬 (ProbiusOfficial)
-GitHub: https://github.com/ProbiusOfficial
-Main work: hello-ctf.com — https://hello-ctf.com
+Any use, including commercial use, redistribution, hosting for third parties,
+and modification, requires written authorization from the copyright holder.
+For authorization inquiries, contact tjsec@qq.com.
+
+Third-party components and fonts included in this product remain under their
+own licenses. Their names, versions, licenses, and required notices are
+listed in THIRD_PARTY_NOTICES.md; those licenses govern those components.
+
+ProbiusOfficial (探姬)
+https://github.com/ProbiusOfficial
+tjsec@qq.com
+
+---
+
+中文摘要（与上文的含义一致）
+
+Palaestra 是探姬（ProbiusOfficial）的专有软件，保留所有权利。公开本仓库
+不授予任何许可，不构成明示、默示或以其他方式的使用授权。任何形式的使
+用，包括商业使用、再分发、为第三方托管与修改，均须取得权利人的书面授权。
+授权事宜请联系 tjsec@qq.com。产品中的第三方组件与字体按其自身许可证处理，
+见 THIRD_PARTY_NOTICES.md。
