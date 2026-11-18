@@ -15,7 +15,15 @@ PalaCTF 是面向私有化训练的综合 CTF 平台，将赛事、练习、课�
 
 ### 一键安装
 
-先从 [Releases](https://github.com/ProbiusOfficial/PalaCTF/releases) 确认已有正式发布，再通过项目维护者可信的独立渠道取得该发布使用的公钥文件与其 SHA-256 指纹。指纹针对公钥的 DER 编码计算；请在独立渠道核对指纹，不能仅凭同一下载页面提供的公钥和指纹建立信任。若尚无可核对的公钥及指纹，请等待维护者公布，勿继续安装。将公钥保存为本机的 `./palactf-release.pub`，并在普通用户终端核验：
+先从 [Releases](https://github.com/ProbiusOfficial/PalaCTF/releases) 确认已有正式发布，再取得该发布使用的公钥文件与其 SHA-256 指纹。公钥的便利副本是本仓库的 [release.pub](release.pub)，发布页也给出同一份公钥。指纹针对公钥的 DER 编码计算；请通过项目维护者的独立渠道核对指纹，不能仅凭同一下载页面提供的公钥和指纹建立信任。
+
+当前发布公钥指纹：
+
+```
+3fa38a5fc0bf650327a774c9612e0bca49180764da484a3902535187649f40e7
+```
+
+将公钥保存为本机的 `./palactf-release.pub`，并在普通用户终端核验：
 
 ```sh
 openssl pkey -pubin -in ./palactf-release.pub -outform DER | sha256sum
@@ -30,12 +38,13 @@ curl --fail --location --proto '=https' --proto-redir '=https' \
 less ./palactf-install.sh
 ```
 
-确认脚本内容及公钥可信后，使用普通用户已核验的文件调用 `sudo`。将命令里的 `已核对的64位十六进制指纹` 换成实际核对的指纹；不要输入示例文字。脚本会查找最新正式发布的 Linux 包，验证下载校验值、签名 manifest 和包内安装脚本，然后运行安装器。尚无发布包时会报错并停止。
+确认脚本内容及公钥可信后，使用普通用户已核验的文件调用 `sudo`。下面命令固定安装 `0.1.0`；省略 `--version` 时使用最新正式发布版本。脚本会验证下载校验值、签名 manifest 和包内安装脚本，然后运行安装器。尚无发布包时会报错并停止。
 
 ```sh
 sudo bash ./palactf-install.sh \
+  --version 0.1.0 \
   --pubkey ./palactf-release.pub \
-  --pubkey-sha256 已核对的64位十六进制指纹 \
+  --pubkey-sha256 3fa38a5fc0bf650327a774c9612e0bca49180764da484a3902535187649f40e7 \
   -- --yes
 ```
 
@@ -51,6 +60,8 @@ sudo bash ./palactf-install.sh \
 
 ## 许可
 
-PalaCTF 为 hello-ctf.com 的专有软件。公开介绍和发布文件不意味着开源，也不授予使用、修改或再分发许可。第三方组件依其各自许可证授权；正式安装包随附相应声明及许可证正文。详见 [LICENSE](LICENSE)。
+PalaCTF 为探姬（ProbiusOfficial）的专有软件。公开介绍和发布文件不意味着开源，也不授予使用、修改或再分发许可。第三方组件依其各自许可证授权；正式安装包随附相应声明及许可证正文。详见 [LICENSE](LICENSE)。
 
-© 2026 hello-ctf.com
+作者：探姬（ProbiusOfficial） · [GitHub](https://github.com/ProbiusOfficial) · 主要作品 [hello-ctf.com](https://hello-ctf.com) · 联系 tjsec@qq.com
+
+© 2026 探姬（ProbiusOfficial）

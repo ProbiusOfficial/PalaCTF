@@ -35,8 +35,7 @@ PalaCTF 本身的专有许可见 [LICENSE](LICENSE)。以下第三方组件依�
 | `katex` | 0.19.1 | MIT | 数学公式渲染 |
 | `marked` | 18.1.2 | MIT | Markdown 解析 |
 | `docx-preview` | 0.4.1 | Apache-2.0 | DOCX 在线预览 |
-| `pptx-preview` | 1.0.7 | ISC | PPTX 在线预览 |
-| `jszip` | 3.10.2 | MIT 或 GPL-3.0-or-later | 文档预览解压，作为 `docx-preview` 与 `pptx-preview` 的依赖打包 |
+| `jszip` | 3.10.2 | MIT 或 GPL-3.0-or-later | 文档预览解压，作为 `docx-preview` 的依赖打包 |
 
 ## 字体
 
