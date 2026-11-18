@@ -13,7 +13,13 @@ PalaCTF 是面向私有化训练的综合 CTF 平台，将赛事、练习、课�
 
 正式发布的 Linux 安装包将列在本仓库的 [Releases](https://github.com/ProbiusOfficial/PalaCTF/releases)。安装前请阅读对应发布说明、校验文件及包内的许可证和安装文档。未出现正式发布包时，请勿使用其他来源的二进制文件冒充正式版本。
 
-[项目页面](https://probiusofficial.github.io/PalaCTF/) · [发布记录](https://github.com/ProbiusOfficial/PalaCTF/releases)
+[项目页面](https://probiusofficial.github.io/PalaCTF/) · [模拟平台](https://probiusofficial.github.io/PalaCTF/app/) · [发布记录](https://github.com/ProbiusOfficial/PalaCTF/releases)
+
+## 在线模拟
+
+项目页面提供纯前端模拟平台，入口为 [/app/](https://probiusofficial.github.io/PalaCTF/app/)。模拟平台不请求后端 API 或 WebSocket，赛事、题目、队伍、课程与排行榜数据全部在浏览器内构造并保存在本地存储；演示身份为虚构账号，无需注册。
+
+模拟数据不代表真实赛事、成绩或部署状态，也不会读取任何生产环境数据。清除站点存储后，模拟状态恢复初始值。模拟平台包含的第三方组件许可见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)，完整正文可在模拟平台的 [许可证页面](https://probiusofficial.github.io/PalaCTF/app/licenses/) 查看。
 
 ## 许可
 

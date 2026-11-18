@@ -20,6 +20,9 @@
     a { color: #a6371d; }
     a:focus-visible { outline: 3px solid #a6371d; outline-offset: 3px; }
     .button { display: inline-block; background: #a6371d; color: white; border-radius: 8px; padding: 10px 18px; text-decoration: none; font-weight: 650; }
+    .button.secondary { background: transparent; color: #a6371d; border: 1px solid #c9b8a8; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+    .notice { margin-top: 20px; padding: 12px 16px; border-left: 3px solid #d44a2a; background: #fff; color: #4c463d; }
     footer { border-top: 1px solid #d6cec2; margin-top: 56px; padding-top: 20px; color: #625d54; }
   </style>
 </head>
@@ -28,9 +31,15 @@
     <p class="eyebrow">PalaCTF</p>
     <h1>训练、竞赛与教学<br>同在一处</h1>
     <p class="lead">面向私有化训练的综合 CTF 平台，让赛事题目、攻防实战、日常练习和课程内容持续积累。</p>
-    <a class="button" href="https://github.com/ProbiusOfficial/PalaCTF/releases">查看发布包</a>
+    <div class="actions">
+      <a class="button" href="app/">进入模拟平台</a>
+      <a class="button secondary" href="https://github.com/ProbiusOfficial/PalaCTF/releases">查看发布包</a>
+    </div>
   </header>
   <main>
+    <h2>在线模拟</h2>
+    <p>模拟平台完全在浏览器内运行，不连接后端，赛事、题目、队伍与排行榜数据均为虚构演示内容，不代表真实赛事或成绩。模拟身份无需注册，清除站点存储后恢复初始状态。</p>
+    <div class="notice">模拟平台仅用于预览界面与交互；真实使用请通过正式发布包私有化部署。</div>
     <h2>平台能力</h2>
     <div class="grid">
       <section class="card"><h3>经典解题</h3><p>题目、动态 Flag、排行榜、队伍与赛后复盘。</p></section>
@@ -41,7 +50,8 @@
     <h2>私有化部署</h2>
     <p>Linux 上使用 Docker Engine 和 PostgreSQL 部署。应用由单个可执行文件提供网页和 API。安装要求与校验方法随正式发布包提供。</p>
     <h2>下载与许可</h2>
-    <p>正式安装包通过 <a href="https://github.com/ProbiusOfficial/PalaCTF/releases">GitHub Releases</a> 发布。请根据发布说明验证文件并阅读包内许可证。PalaCTF 是专有软件；公开介绍不授予源码或软件使用许可。</p>
+    <p>正式安装包通过 <a href="https://github.com/ProbiusOfficial/PalaCTF/releases">GitHub Releases</a> 发布。请根据发布说明验证文件并阅读包内许可证。PalaCTF 是专有软件；公开介绍不授予源码或软件使用许可，详见 <a href="LICENSE">LICENSE</a>。</p>
+    <p>模拟平台随附的第三方组件遵循各自许可证，完整正文可在模拟平台的 <a href="app/licenses/">许可证页面</a> 查看，摘要见 <a href="https://github.com/ProbiusOfficial/PalaCTF/blob/main/THIRD_PARTY_NOTICES.md">THIRD_PARTY_NOTICES.md</a>。</p>
     <p><a href="https://github.com/ProbiusOfficial/PalaCTF">查看项目 README</a></p>
   </main>
   <footer>© 2026 hello-ctf.com · PalaCTF</footer>
