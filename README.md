@@ -11,7 +11,7 @@ PalaCTF 是面向私有化训练的综合 CTF 平台，将赛事、练习、课�
 
 ## 获取与使用
 
-正式发布的 Linux 安装包将列在本仓库的 [Releases](https://github.com/ProbiusOfficial/PalaCTF/releases)。安装前请阅读对应发布说明、校验文件及包内的许可证和安装文档。未出现正式发布包时，请勿使用其他来源的二进制文件冒充正式版本。
+Linux amd64 安装包已发布在本仓库的 [v0.1.0 Release](https://github.com/ProbiusOfficial/PalaCTF/releases/tag/v0.1.0)。安装前请阅读发布说明、校验文件及包内的许可证和安装文档；请勿使用其他来源的二进制文件冒充正式版本。
 
 ### 一键安装
 
@@ -38,7 +38,7 @@ curl --fail --location --proto '=https' --proto-redir '=https' \
 less ./palactf-install.sh
 ```
 
-确认脚本内容及公钥可信后，使用普通用户已核验的文件调用 `sudo`。下面命令固定安装 `0.1.0`；省略 `--version` 时使用最新正式发布版本。脚本会验证下载校验值、签名 manifest 和包内安装脚本，然后运行安装器。尚无发布包时会报错并停止。
+确认脚本内容及公钥可信后，使用普通用户已核验的文件调用 `sudo`。下面命令固定安装 `0.1.0`；省略 `--version` 时使用最新正式发布版本。脚本会验证下载校验值、签名 manifest 和包内安装脚本，然后运行安装器。下载失败或签名不符时会报错并停止。
 
 ```sh
 sudo bash ./palactf-install.sh \
