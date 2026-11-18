@@ -15,6 +15,14 @@ Linux amd64 安装包已发布在本仓库的 [v0.1.0 Release](https://github.co
 
 ### 一键安装
 
+Linux amd64 主机已准备 Docker Engine、Compose v2、buildx、PostgreSQL 镜像及 systemd 时，可用 `wget` 从 GitHub 下载固定版本的安装入口和发布公钥，核对脚本 SHA-256 与公钥指纹后安装：
+
+```sh
+bash -c 'set -euo pipefail; d=$(mktemp -d); trap '\''rm -rf -- "$d"'\'' EXIT; wget -q --https-only --timeout=15 --tries=3 -O "$d/install.sh" https://raw.githubusercontent.com/ProbiusOfficial/PalaCTF/ac63587ae1fcebc4203984666774234ee414295f/install.sh; wget -q --https-only --timeout=15 --tries=3 -O "$d/release.pub" https://github.com/ProbiusOfficial/PalaCTF/releases/download/v0.1.0/pala-release.pub; printf "%s  %s\n" baf99785c4eca09aa05f06de95b2c247b4fdd1cf421bce9456cc4db8b2026509 "$d/install.sh" | sha256sum -c -; test "$(openssl pkey -pubin -in "$d/release.pub" -outform DER | sha256sum | cut -d" " -f1)" = 3fa38a5fc0bf650327a774c9612e0bca49180764da484a3902535187649f40e7; sudo bash "$d/install.sh" --version 0.1.0 --pubkey "$d/release.pub" --pubkey-sha256 3fa38a5fc0bf650327a774c9612e0bca49180764da484a3902535187649f40e7 -- --yes'
+```
+
+安装命令固定了脚本提交、脚本摘要与签名公钥指纹；首次使用前仍应通过独立渠道核对这两个摘要。想先验证下载而不安装，可按下文下载脚本后使用 `--download-only`。安装器不会在缺少 Docker 时自动安装 Docker；Ubuntu 24.04 amd64 可在命令末尾的 `--yes` 后添加 `--install-docker`。当前没有自动更新或默认的在线更新检查。
+
 先从 [Releases](https://github.com/ProbiusOfficial/PalaCTF/releases) 确认已有正式发布，再取得该发布使用的公钥文件与其 SHA-256 指纹。公钥的便利副本是本仓库的 [release.pub](release.pub)，发布页也给出同一份公钥。指纹针对公钥的 DER 编码计算；请通过项目维护者的独立渠道核对指纹，不能仅凭同一下载页面提供的公钥和指纹建立信任。
 
 当前发布公钥指纹：
