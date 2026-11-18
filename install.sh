@@ -196,8 +196,9 @@ fi
 fetch() {
 	local source="$1" dest="$2" limit="$3" size
 	if command -v curl >/dev/null 2>&1; then
-		curl --fail --silent --show-error --location \
+		curl --http1.1 --fail --silent --show-error --location \
 			--connect-timeout 10 --max-time 1800 \
+			--retry 3 --retry-all-errors --retry-delay 2 \
 			--max-filesize "$limit" --max-redirs 5 \
 			--proto '=https' --proto-redir '=https' --globoff \
 			--output "$dest" -- "$source" || return 1
@@ -300,9 +301,9 @@ note "release: $REPO $TAG ($OS/$ARCH)"
 note "public key sha256: $KEY_SHA"
 note "downloading $ASSET"
 fetch "$BASE/$ASSET" "$BUNDLE" 8589934592 ||
-	die "cannot download $BASE/$ASSET; the release asset does not exist"
+	die "cannot download $BASE/$ASSET; check the network and release assets"
 fetch "$BASE/$ASSET.sha256" "$SUM" 4096 ||
-	die "cannot download $BASE/$ASSET.sha256; the release asset does not exist"
+	die "cannot download $BASE/$ASSET.sha256; check the network and release assets"
 
 lines="$(awk 'NF { count++ } END { print count + 0 }' "$SUM")"
 [ "$lines" -eq 1 ] || die "checksum file must contain exactly one entry"
