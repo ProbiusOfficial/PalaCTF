@@ -58,6 +58,10 @@ sudo bash ./palactf-install.sh \
 
 `sudo` 运行的是已保存并检查的本地脚本；公钥路径须允许 root 读取。若主机缺少 Docker，在支持的 Ubuntu 24.04 amd64 主机上可显式追加 `--install-docker` 到 `--` 之后，安装器才会使用签名包内经校验的 `docker-prereq.sh` 从 Docker 官方软件源安装依赖。其他主机请自行准备 Docker Engine、Compose v2、buildx 及 Docker 守护进程访问权限。可先将 `--yes` 换成 `--dry-run` 查看安装计划。
 
+### 更新检查
+
+`v0.1.0` 发布包不含内建的 `check-update` 命令；新版本发布后可用 `palactf check-update --pubkey /path/to/release.pub` 显式检查 GitHub 最新正式版。命令会验证签名清单、发布版本与对应安装包附件，发现更新时退出码为 `10`；已是最新或更高版本时为 `0`，检查失败为 `1`。只检查，不下载、不安装，也不在后台自动联网。当前 `v0.1.0` 的已签名清单发布在 [更新元数据](https://probiusofficial.github.io/PalaCTF/updates/linux-amd64/manifest.json)，并非新二进制版本。
+
 [项目页面](https://probiusofficial.github.io/PalaCTF/) · [模拟平台](https://probiusofficial.github.io/PalaCTF/app/) · [发布记录](https://github.com/ProbiusOfficial/PalaCTF/releases)
 
 ## 在线模拟
