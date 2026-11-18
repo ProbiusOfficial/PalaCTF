@@ -1,0 +1,850 @@
+{
+  "arch": "amd64",
+  "archive": "palactf-0.1.0-linux-amd64.tar.gz",
+  "artifacts": [
+    {
+      "mode": "0755",
+      "name": "palactf",
+      "path": "palactf",
+      "sha256": "f8a16b38eb5b80338e042513c421bc3b96f8f8a85ff62d38b2f5e50ea1095e61",
+      "size": 61059198
+    },
+    {
+      "mode": "0755",
+      "name": "installer",
+      "path": "install.sh",
+      "sha256": "9da1d96662ae4a60145d09d28dbf2172aca9a504cdf859cfbfe7f61b084981aa",
+      "size": 123373
+    },
+    {
+      "mode": "0755",
+      "name": "verifier",
+      "path": "verify.sh",
+      "sha256": "df85f228921a8dfd44be142d52e98e15a0d6463d27043cb2e0166393e9ad4371",
+      "size": 48252
+    },
+    {
+      "mode": "0755",
+      "name": "backup-script",
+      "path": "backup.sh",
+      "sha256": "2b531d2401d7b15674cca1ee0efd2ec5ab454308fc4497276f40cf9d31cd9950",
+      "size": 50404
+    },
+    {
+      "mode": "0644",
+      "name": "license",
+      "path": "LICENSE",
+      "sha256": "4a74f04f29d43aadaf1b343941be725c6315e86513069b2fd82176503d1c98af",
+      "size": 1611
+    },
+    {
+      "mode": "0644",
+      "name": "notice",
+      "path": "NOTICE",
+      "sha256": "1f2997a1a020e6fda609141459b3748b1e29d9d87c7fc075d00a354644c160de",
+      "size": 2041
+    },
+    {
+      "mode": "0644",
+      "name": "third-party-notices",
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "5272de5b6f187b48c9a655b14ff9388fda222a98c4df5456bc84bb423fc3b558",
+      "size": 11225
+    },
+    {
+      "mode": "0644",
+      "name": "template-pala-env",
+      "path": "templates/pala.env.tmpl",
+      "sha256": "0f08cefe6186e9544b5c714981abdb532bc12ebadc5bbfa048e15aaf090ac2c6",
+      "size": 557
+    },
+    {
+      "mode": "0644",
+      "name": "template-postgres-env",
+      "path": "templates/postgres.env.tmpl",
+      "sha256": "e283ce185f62582b4be968645f269b28b44b700f6b1af847d95875beebd7c495",
+      "size": 225
+    },
+    {
+      "mode": "0644",
+      "name": "template-palactf-service",
+      "path": "templates/palactf.service",
+      "sha256": "bcf28741d551a1d3a5a7223c946db6dd32a5a8a8563c991ac5c614728070e311",
+      "size": 860
+    },
+    {
+      "mode": "0644",
+      "name": "template-postgres-service",
+      "path": "templates/palactf-postgres.service",
+      "sha256": "a7c9e5e3e8df4054de26e0e0a6d533d83aab9bd2d797c9c001b84a629ead7d2c",
+      "size": 866
+    },
+    {
+      "mode": "0644",
+      "name": "sbom",
+      "path": "SBOM.cdx.json",
+      "sha256": "5b4f29d993e8ebf7c63edc83b3051a7f0babfeffd04d073aca32cf1d125dcd4b",
+      "size": 131006
+    },
+    {
+      "mode": "0644",
+      "name": "publish-gate-receipt",
+      "path": "publish-gate-receipt.json",
+      "sha256": "177a4666ba5eb5c35f62c8d73bc138102a851ba96a98763e9d84e2bdcd4db944",
+      "size": 447
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:go-github.com+coder+websocket-v1.8.13.txt",
+      "path": "licenses/go-github.com+coder+websocket-v1.8.13.txt",
+      "sha256": "52a5fa559be7733e34015922af0d79d183cdf8912d1b4f5d6692cb9a8b8a637f",
+      "size": 766
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:go-github.com+go-chi+chi+v5-v5.3.0.txt",
+      "path": "licenses/go-github.com+go-chi+chi+v5-v5.3.0.txt",
+      "sha256": "a22eab11163385f2358faa5f635129e91d776f1856e626b13d1380c30c0fe8e9",
+      "size": 1144
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:go-github.com+google+uuid-v1.6.0.txt",
+      "path": "licenses/go-github.com+google+uuid-v1.6.0.txt",
+      "sha256": "48b6d2a69402face5595bf1e73a0454a99343a3aebaf6a6855d7f3de7a6707d0",
+      "size": 1501
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:go-github.com+jackc+pgpassfile-v1.0.0.txt",
+      "path": "licenses/go-github.com+jackc+pgpassfile-v1.0.0.txt",
+      "sha256": "b86aaa74b9f8f28d2a2c362a4d9b01801241e203caa270ba8baf53009cc8a51e",
+      "size": 1094
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:go-github.com+jackc+pgservicefile-v0.0.0-20240606120523-5a60cdf6a761.txt",
+      "path": "licenses/go-github.com+jackc+pgservicefile-v0.0.0-20240606120523-5a60cdf6a761.txt",
+      "sha256": "7403aa4e271bff848130f5066dce0d8750ec18e32e6e2350bac052847214f532",
+      "size": 1094
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:go-github.com+jackc+pgx+v5-v5.9.2.txt",
+      "path": "licenses/go-github.com+jackc+pgx+v5-v5.9.2.txt",
+      "sha256": "22f3fc3ea13db7c5476bfde20393bcc9735c5ba57e26e856bd2f8627f2bae24f",
+      "size": 1099
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:go-github.com+jackc+puddle+v2-v2.2.2.txt",
+      "path": "licenses/go-github.com+jackc+puddle+v2-v2.2.2.txt",
+      "sha256": "d5d5f6632d881fa1f2b31828e5b17e3a6f8a0c1b21c78e2c936881d0130dd3e1",
+      "size": 1094
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:go-golang.org+x+crypto-v0.56.0.txt",
+      "path": "licenses/go-golang.org+x+crypto-v0.56.0.txt",
+      "sha256": "2a1e57e1504344767ab55281ed220d882568e9a9cda572f4328b7941e3122017",
+      "size": 1474
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:go-golang.org+x+image-v0.45.0.txt",
+      "path": "licenses/go-golang.org+x+image-v0.45.0.txt",
+      "sha256": "2a1e57e1504344767ab55281ed220d882568e9a9cda572f4328b7941e3122017",
+      "size": 1474
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:go-golang.org+x+sync-v0.22.0.txt",
+      "path": "licenses/go-golang.org+x+sync-v0.22.0.txt",
+      "sha256": "2a1e57e1504344767ab55281ed220d882568e9a9cda572f4328b7941e3122017",
+      "size": 1474
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:go-golang.org+x+sys-v0.47.0.txt",
+      "path": "licenses/go-golang.org+x+sys-v0.47.0.txt",
+      "sha256": "2a1e57e1504344767ab55281ed220d882568e9a9cda572f4328b7941e3122017",
+      "size": 1474
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:go-golang.org+x+text-v0.41.0.txt",
+      "path": "licenses/go-golang.org+x+text-v0.41.0.txt",
+      "sha256": "2a1e57e1504344767ab55281ed220d882568e9a9cda572f4328b7941e3122017",
+      "size": 1474
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:go-gopkg.in+yaml.v3-v3.0.1.txt",
+      "path": "licenses/go-gopkg.in+yaml.v3-v3.0.1.txt",
+      "sha256": "4bf24449ae5717b3035a23e3e8e10653399935cbcfdbd41cbbd1718bb12a2e43",
+      "size": 14138
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+floating-ui+core-1.8.0.txt",
+      "path": "licenses/npm-+floating-ui+core-1.8.0.txt",
+      "sha256": "a9b222a43092a7821d7abc758c6f3c9bfeac68c1c970fcfd47c1b0afb91b8429",
+      "size": 1110
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+floating-ui+dom-1.8.0.txt",
+      "path": "licenses/npm-+floating-ui+dom-1.8.0.txt",
+      "sha256": "a9b222a43092a7821d7abc758c6f3c9bfeac68c1c970fcfd47c1b0afb91b8429",
+      "size": 1110
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+floating-ui+react-dom-2.1.9.txt",
+      "path": "licenses/npm-+floating-ui+react-dom-2.1.9.txt",
+      "sha256": "a9b222a43092a7821d7abc758c6f3c9bfeac68c1c970fcfd47c1b0afb91b8429",
+      "size": 1110
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+floating-ui+utils-0.2.12.txt",
+      "path": "licenses/npm-+floating-ui+utils-0.2.12.txt",
+      "sha256": "a9b222a43092a7821d7abc758c6f3c9bfeac68c1c970fcfd47c1b0afb91b8429",
+      "size": 1110
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+fontsource+instrument-serif-5.3.0.txt",
+      "path": "licenses/npm-+fontsource+instrument-serif-5.3.0.txt",
+      "sha256": "5aa36bf1704e60d4ef6f75a9d1e35ca22e40dc55b55b575bc3151873d6dcc558",
+      "size": 4553
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+fontsource-variable+geist-5.3.0.txt",
+      "path": "licenses/npm-+fontsource-variable+geist-5.3.0.txt",
+      "sha256": "c67224a92550775f9df45a0ab3ed71bfe81849e2d15dacabd262a66d6181e1a7",
+      "size": 4507
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+fontsource-variable+geist-mono-5.3.0.txt",
+      "path": "licenses/npm-+fontsource-variable+geist-mono-5.3.0.txt",
+      "sha256": "58e95da1cc0a2c4901479efc04d20503b67a9ced9369c831cc733586a5ef81e5",
+      "size": 4519
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+primitive-1.2.0.txt",
+      "path": "licenses/npm-+radix-ui+primitive-1.2.0.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-arrow-1.1.17.txt",
+      "path": "licenses/npm-+radix-ui+react-arrow-1.1.17.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-avatar-1.3.1.txt",
+      "path": "licenses/npm-+radix-ui+react-avatar-1.3.1.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-collection-1.2.0.txt",
+      "path": "licenses/npm-+radix-ui+react-collection-1.2.0.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-compose-refs-1.1.5.txt",
+      "path": "licenses/npm-+radix-ui+react-compose-refs-1.1.5.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-context-1.3.0.txt",
+      "path": "licenses/npm-+radix-ui+react-context-1.3.0.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-dialog-1.3.1.txt",
+      "path": "licenses/npm-+radix-ui+react-dialog-1.3.1.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-direction-1.2.0.txt",
+      "path": "licenses/npm-+radix-ui+react-direction-1.2.0.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-dismissable-layer-1.2.1.txt",
+      "path": "licenses/npm-+radix-ui+react-dismissable-layer-1.2.1.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-dropdown-menu-2.2.1.txt",
+      "path": "licenses/npm-+radix-ui+react-dropdown-menu-2.2.1.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-focus-guards-1.2.0.txt",
+      "path": "licenses/npm-+radix-ui+react-focus-guards-1.2.0.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-focus-scope-1.3.1.txt",
+      "path": "licenses/npm-+radix-ui+react-focus-scope-1.3.1.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-id-1.1.4.txt",
+      "path": "licenses/npm-+radix-ui+react-id-1.1.4.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-menu-2.2.1.txt",
+      "path": "licenses/npm-+radix-ui+react-menu-2.2.1.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-popper-1.4.0.txt",
+      "path": "licenses/npm-+radix-ui+react-popper-1.4.0.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-portal-1.2.0.txt",
+      "path": "licenses/npm-+radix-ui+react-portal-1.2.0.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-presence-1.1.11.txt",
+      "path": "licenses/npm-+radix-ui+react-presence-1.1.11.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-primitive-2.2.0.txt",
+      "path": "licenses/npm-+radix-ui+react-primitive-2.2.0.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-progress-1.2.1.txt",
+      "path": "licenses/npm-+radix-ui+react-progress-1.2.1.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-roving-focus-1.2.1.txt",
+      "path": "licenses/npm-+radix-ui+react-roving-focus-1.2.1.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-separator-1.2.0.txt",
+      "path": "licenses/npm-+radix-ui+react-separator-1.2.0.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-slot-1.5.0.txt",
+      "path": "licenses/npm-+radix-ui+react-slot-1.5.0.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-switch-1.4.1.txt",
+      "path": "licenses/npm-+radix-ui+react-switch-1.4.1.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-tabs-1.2.1.txt",
+      "path": "licenses/npm-+radix-ui+react-tabs-1.2.1.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-tooltip-1.4.1.txt",
+      "path": "licenses/npm-+radix-ui+react-tooltip-1.4.1.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-use-callback-ref-1.1.5.txt",
+      "path": "licenses/npm-+radix-ui+react-use-callback-ref-1.1.5.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-use-controllable-state-1.3.0.txt",
+      "path": "licenses/npm-+radix-ui+react-use-controllable-state-1.3.0.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-use-effect-event-0.0.5.txt",
+      "path": "licenses/npm-+radix-ui+react-use-effect-event-0.0.5.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-use-is-hydrated-0.1.3.txt",
+      "path": "licenses/npm-+radix-ui+react-use-is-hydrated-0.1.3.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-use-layout-effect-1.1.4.txt",
+      "path": "licenses/npm-+radix-ui+react-use-layout-effect-1.1.4.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-use-rect-1.1.4.txt",
+      "path": "licenses/npm-+radix-ui+react-use-rect-1.1.4.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-use-size-1.1.5.txt",
+      "path": "licenses/npm-+radix-ui+react-use-size-1.1.5.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+react-visually-hidden-1.2.13.txt",
+      "path": "licenses/npm-+radix-ui+react-visually-hidden-1.2.13.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+radix-ui+rect-1.1.3.txt",
+      "path": "licenses/npm-+radix-ui+rect-1.1.3.txt",
+      "sha256": "94fb0de84fc305d64a0cf4d25fef624fa900e693a44ecfa993d354e5f1319a11",
+      "size": 1084
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+tanstack+query-core-5.105.0.txt",
+      "path": "licenses/npm-+tanstack+query-core-5.105.0.txt",
+      "sha256": "a0537c080efe43088466f4b947070f5f970f17de3abd1b6e8726fbee2a27c027",
+      "size": 1100
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+tanstack+react-query-5.105.0.txt",
+      "path": "licenses/npm-+tanstack+react-query-5.105.0.txt",
+      "sha256": "a0537c080efe43088466f4b947070f5f970f17de3abd1b6e8726fbee2a27c027",
+      "size": 1100
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+types+react-19.3.0.txt",
+      "path": "licenses/npm-+types+react-19.3.0.txt",
+      "sha256": "5a4560f7d358728a8c122a86bdccc7c5baa889679aa727a142afcd09d27c17eb",
+      "size": 1162
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+types+react-dom-19.3.0.txt",
+      "path": "licenses/npm-+types+react-dom-19.3.0.txt",
+      "sha256": "5a4560f7d358728a8c122a86bdccc7c5baa889679aa727a142afcd09d27c17eb",
+      "size": 1162
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+types+trusted-types-2.0.7.txt",
+      "path": "licenses/npm-+types+trusted-types-2.0.7.txt",
+      "sha256": "5a4560f7d358728a8c122a86bdccc7c5baa889679aa727a142afcd09d27c17eb",
+      "size": 1162
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+xterm+addon-fit-0.11.0.txt",
+      "path": "licenses/npm-+xterm+addon-fit-0.11.0.txt",
+      "sha256": "6d736b3e0355b20e45ecf26864c4fe78362b8bece4827ffea2a62f126b2ad11c",
+      "size": 1124
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-+xterm+xterm-6.0.0.txt",
+      "path": "licenses/npm-+xterm+xterm-6.0.0.txt",
+      "sha256": "4416f9c621abe44251662f9980c0ef46df519074de2dd135cbfcbd8b3e63d12a",
+      "size": 1282
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-aria-hidden-1.2.6.txt",
+      "path": "licenses/npm-aria-hidden-1.2.6.txt",
+      "sha256": "c5e3355329480e1d7d91eac31aab47c84ea9206db8210e15c981e57cd0e5ca5c",
+      "size": 1092
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-class-variance-authority-0.7.1.txt",
+      "path": "licenses/npm-class-variance-authority-0.7.1.txt",
+      "sha256": "ea76a6409cfff513c1d994286778d1e6816018bdba96ebdbd82d205f0b3ba68d",
+      "size": 10774
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-clsx-2.1.1.txt",
+      "path": "licenses/npm-clsx-2.1.1.txt",
+      "sha256": "27f1f689a26349bf9426ca17127ff93c53c659486a5f6c5b212f7977c967b253",
+      "size": 1125
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-commander-15.0.0.txt",
+      "path": "licenses/npm-commander-15.0.0.txt",
+      "sha256": "2c76527a43575800c744c01d7af9453289df6f1cfbbff989f3a52214e6c9d104",
+      "size": 1119
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-cookie-1.1.1.txt",
+      "path": "licenses/npm-cookie-1.1.1.txt",
+      "sha256": "6e9a2827b0dd7ece0e68d67f46d783ab2538198029e10a705a3c6279f35b89e2",
+      "size": 1196
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-core-util-is-1.0.3.txt",
+      "path": "licenses/npm-core-util-is-1.0.3.txt",
+      "sha256": "c1f1e98ea36f452dc66305142fd9b52a5df82e4763112ede195298bc24839517",
+      "size": 1098
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-csstype-3.2.3.txt",
+      "path": "licenses/npm-csstype-3.2.3.txt",
+      "sha256": "b79353a148ea5950b73860aad4ee6f692167be5ab2f86eaee31ea397c4da6287",
+      "size": 1083
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-detect-node-es-1.1.0.txt",
+      "path": "licenses/npm-detect-node-es-1.1.0.txt",
+      "sha256": "03390f7f0fbbb799005cff08500cf2d97ccfb080deb6144d278c56a3e5cc836a",
+      "size": 1089
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-docx-preview-0.4.1.txt",
+      "path": "licenses/npm-docx-preview-0.4.1.txt",
+      "sha256": "573ffc1b47cb7ae8e969df5b5ab48dd06f9387dbede96a5a7425a1d8d88ba837",
+      "size": 11579
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-dompurify-3.4.17.txt",
+      "path": "licenses/npm-dompurify-3.4.17.txt",
+      "sha256": "7c1884e285f67063c3ff111a7ed05cf592ff0a427c3c729dd865daad62a35046",
+      "size": 28130
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-get-nonce-1.0.1.txt",
+      "path": "licenses/npm-get-nonce-1.0.1.txt",
+      "sha256": "9569ad450d542b55ad73170ef7f6ac35d24b8ac6c6ad8cc3151c7ee4d2998567",
+      "size": 1092
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-highlight.js-11.12.0.txt",
+      "path": "licenses/npm-highlight.js-11.12.0.txt",
+      "sha256": "e7c9b9a6ff91301df37d6723f72b2834ad64101e6ee0a9d2113a1c02d8ff0c9c",
+      "size": 1535
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-immediate-3.0.6.txt",
+      "path": "licenses/npm-immediate-3.0.6.txt",
+      "sha256": "3a132635580c84ccb916164428b7ba69736831510e64024543ef18872e775a56",
+      "size": 1140
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-inherits-2.0.4.txt",
+      "path": "licenses/npm-inherits-2.0.4.txt",
+      "sha256": "84d551b7c27f9365ed0ff4044077f7420dc88b098d334024b0575489e7a4510d",
+      "size": 770
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-isarray-1.0.0.txt",
+      "path": "licenses/npm-isarray-1.0.0.txt",
+      "sha256": "4f8fcb17751690e5c176d23caedbdc5655e1ab9060b5959b1a443c17a9e8334d",
+      "size": 1130
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-jszip-3.10.2.txt",
+      "path": "licenses/npm-jszip-3.10.2.txt",
+      "sha256": "00a7d418222f3172062fb25af97eb9aeebe47a138da483e3792f05ad8ac0e513",
+      "size": 33783
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-katex-0.19.1.txt",
+      "path": "licenses/npm-katex-0.19.1.txt",
+      "sha256": "1d866747c3b0474eb89ba44526b3b516d6d9f064fc02f5310c760e4d192bb6b4",
+      "size": 1128
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-lie-3.3.0.txt",
+      "path": "licenses/npm-lie-3.3.0.txt",
+      "sha256": "6879f33221814b26845d2dde6bcc7374222537a9d091f1b6884f684fe7d4a57b",
+      "size": 1108
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-lucide-react-0.545.0.txt",
+      "path": "licenses/npm-lucide-react-0.545.0.txt",
+      "sha256": "90c50a24c594549a1c6c231cb929cc0225edff1778023cb64e951f6342a312ae",
+      "size": 2025
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-marked-18.1.2.txt",
+      "path": "licenses/npm-marked-18.1.2.txt",
+      "sha256": "ede1d6123f27ba9eaf89b197927e673f874fb0ae3ad4106a0e771475e10370f3",
+      "size": 2963
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-pako-1.0.11.txt",
+      "path": "licenses/npm-pako-1.0.11.txt",
+      "sha256": "a77faa0301533d2bac9b13c21f2f96d243c6361be9d013de6d33e85c2ca1ec61",
+      "size": 1125
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-process-nextick-args-2.0.1.txt",
+      "path": "licenses/npm-process-nextick-args-2.0.1.txt",
+      "sha256": "2c1d2fa186f644ec123c33e4c5f68f280db7683ea7fa5f5a212caecac83df6d8",
+      "size": 1088
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-react-19.3.1.txt",
+      "path": "licenses/npm-react-19.3.1.txt",
+      "sha256": "7f8a7f4322d7d531110d0c241e56c057cdf2d8084b3045920b2372ee7380c973",
+      "size": 1109
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-react-dom-19.3.1.txt",
+      "path": "licenses/npm-react-dom-19.3.1.txt",
+      "sha256": "7f8a7f4322d7d531110d0c241e56c057cdf2d8084b3045920b2372ee7380c973",
+      "size": 1109
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-react-remove-scroll-2.7.2.txt",
+      "path": "licenses/npm-react-remove-scroll-2.7.2.txt",
+      "sha256": "c5e3355329480e1d7d91eac31aab47c84ea9206db8210e15c981e57cd0e5ca5c",
+      "size": 1092
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-react-remove-scroll-bar-2.3.8.txt",
+      "path": "licenses/npm-react-remove-scroll-bar-2.3.8.txt",
+      "sha256": "3bf892d970809f0e258c35e206ca42fc68ada2b87f7e1d32610838f10d38f787",
+      "size": 1127
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-react-router-7.18.5.txt",
+      "path": "licenses/npm-react-router-7.18.5.txt",
+      "sha256": "1c5669f4ba8f62e7bfc57d37a5503ea239db30f160b349701406a49ca9c36497",
+      "size": 1185
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-react-router-dom-7.18.5.txt",
+      "path": "licenses/npm-react-router-dom-7.18.5.txt",
+      "sha256": "1c5669f4ba8f62e7bfc57d37a5503ea239db30f160b349701406a49ca9c36497",
+      "size": 1185
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-react-style-singleton-2.2.3.txt",
+      "path": "licenses/npm-react-style-singleton-2.2.3.txt",
+      "sha256": "c5e3355329480e1d7d91eac31aab47c84ea9206db8210e15c981e57cd0e5ca5c",
+      "size": 1092
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-readable-stream-2.3.8.txt",
+      "path": "licenses/npm-readable-stream-2.3.8.txt",
+      "sha256": "8bbaecd5f7ce8444de1811adf934d9bf81374bfbd6b74019cbe95b3aee823aa7",
+      "size": 2358
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-safe-buffer-5.1.2.txt",
+      "path": "licenses/npm-safe-buffer-5.1.2.txt",
+      "sha256": "682732ebb00e26d10ef67b2e03b4e7560af63fb83659f3fe74412800bd710a25",
+      "size": 1102
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-scheduler-0.28.0.txt",
+      "path": "licenses/npm-scheduler-0.28.0.txt",
+      "sha256": "7f8a7f4322d7d531110d0c241e56c057cdf2d8084b3045920b2372ee7380c973",
+      "size": 1109
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-set-cookie-parser-2.7.3.txt",
+      "path": "licenses/npm-set-cookie-parser-2.7.3.txt",
+      "sha256": "3a742fec29853507cdf239a00f3bb62227019cf512e9a5e55d49c28bbe145d32",
+      "size": 1147
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-setimmediate-1.0.5.txt",
+      "path": "licenses/npm-setimmediate-1.0.5.txt",
+      "sha256": "7dd13f2e9c4c00c43484cfbf974944f3146dde1e396b8a479e88df7c4bc795d8",
+      "size": 1128
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-sonner-2.0.8.txt",
+      "path": "licenses/npm-sonner-2.0.8.txt",
+      "sha256": "8be724df18b25e4dd31c8131674538607fb1fd89c12e0f180f79f26cadfd51a1",
+      "size": 1094
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-string_decoder-1.1.1.txt",
+      "path": "licenses/npm-string_decoder-1.1.1.txt",
+      "sha256": "2d4799d2ec97298311c68d486af7452a699eb82b1ccdf3626b4132a1d58acee7",
+      "size": 2359
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-tailwind-merge-3.7.0.txt",
+      "path": "licenses/npm-tailwind-merge-3.7.0.txt",
+      "sha256": "09d323fef8c71365b5f7b4472bb343701025089947badc6e144e72355e61b037",
+      "size": 1094
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-tslib-2.8.1.txt",
+      "path": "licenses/npm-tslib-2.8.1.txt",
+      "sha256": "2e205724052e4328d9794d8447e9dad1351742de450286fbad652a88b6f584b9",
+      "size": 680
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-use-callback-ref-1.3.3.txt",
+      "path": "licenses/npm-use-callback-ref-1.3.3.txt",
+      "sha256": "c5e3355329480e1d7d91eac31aab47c84ea9206db8210e15c981e57cd0e5ca5c",
+      "size": 1092
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-use-sidecar-1.1.3.txt",
+      "path": "licenses/npm-use-sidecar-1.1.3.txt",
+      "sha256": "c5e3355329480e1d7d91eac31aab47c84ea9206db8210e15c981e57cd0e5ca5c",
+      "size": 1092
+    },
+    {
+      "mode": "0644",
+      "name": "license-text:npm-util-deprecate-1.0.2.txt",
+      "path": "licenses/npm-util-deprecate-1.0.2.txt",
+      "sha256": "e7a3373c56aa94727b312abb4ac588c621b863b208b6e85efacbf9f908d4ca8c",
+      "size": 1123
+    },
+    {
+      "mode": "0755",
+      "name": "online-bootstrap",
+      "path": "online.sh",
+      "sha256": "bc12de87f00dc925398cdf152ef9fb966243770d0c8b7c029e01a511efddbd7d",
+      "size": 35792
+    },
+    {
+      "mode": "0755",
+      "name": "update-checker",
+      "path": "check-update.sh",
+      "sha256": "9f85a2e83078f3f8ca74492df08c456a41e9b0b032d5eb6f45bb04b5774087cc",
+      "size": 21227
+    },
+    {
+      "mode": "0755",
+      "name": "docker-prereq",
+      "path": "docker-prereq.sh",
+      "sha256": "842e76569fbd34db940c019170b690a982720330221cd41a445c23b9b7288c63",
+      "size": 7649
+    }
+  ],
+  "binaryVersion": "0.1.0",
+  "channel": "stable",
+  "createdAt": "2026-11-18T16:36:56Z",
+  "databaseSchemaVersion": 1,
+  "offline": {
+    "postgresImageBundled": false,
+    "prerequisites": [
+      "docker-engine",
+      "docker-compose-plugin",
+      "systemd",
+      "postgres-image-local"
+    ]
+  },
+  "os": "linux",
+  "product": "PalaCTF",
+  "schemaVersion": 1,
+  "signingKeySha256": "3fa38a5fc0bf650327a774c9612e0bca49180764da484a3902535187649f40e7",
+  "version": "0.1.0"
+}

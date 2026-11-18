@@ -1,0 +1,8 @@
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Published release public-key fingerprint in signed manifest"
+paths = ['''^site/updates/linux-amd64/manifest\.json$''']
+regexTarget = "secret"
+regexes = ['''^3fa38a5fc0bf650327a774c9612e0bca49180764da484a3902535187649f40e7$''']
