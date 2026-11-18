@@ -4,9 +4,10 @@
 # The bundle and its published SHA-256 file are downloaded from a release. The
 # signed manifest inside the bundle is verified with a caller-supplied release
 # public key before any bundled script runs. Only the installer, verifier,
-# backup script and installer templates are staged, and each staged file is
-# checked against the signed manifest. The bundled installer then performs its
-# own full bundle verification, including the stable publish gate receipt.
+# backup script, optional Docker prerequisite helper and installer templates
+# are staged, and each staged file is checked against the signed manifest. The
+# bundled installer then performs its own full bundle verification, including
+# the stable publish gate receipt.
 #
 # No release version, public key or signature is embedded here. This script
 # works only after a release bundle and the matching public key exist.
@@ -51,7 +52,9 @@ Options:
                          the installer. Implies --keep.
   --                     Pass the remaining options to the bundled installer,
                          for example --dry-run, --yes, --no-admin, --upgrade,
-                         --root DIR or --systemd-dir DIR.
+                         --install-docker, --root DIR or --systemd-dir DIR.
+                         --install-docker uses the signed bundle's Docker
+                         prerequisite helper on supported hosts.
 
 The installer requires a published release asset named
 palactf-<version>-linux-<amd64|arm64>.tar.gz and its .sha256 file. It refuses
@@ -158,7 +161,7 @@ command -v curl >/dev/null 2>&1 || command -v wget >/dev/null 2>&1 ||
 if [ "${#INSTALL_ARGS[@]}" -gt 0 ]; then
 	for arg in "${INSTALL_ARGS[@]}"; do
 		case "$arg" in
-		--bundle | --pubkey | --binary | --sha256 | --version | --postgres-archive | --postgres-archive-sha256)
+		--bundle | --bundle=* | --pubkey | --pubkey=* | --binary | --binary=* | --sha256 | --sha256=* | --version | --version=* | --postgres-archive | --postgres-archive=* | --postgres-archive-sha256 | --postgres-archive-sha256=* | --docker-prereq | --docker-prereq=*)
 			die "the installer option $arg is controlled by this script"
 			;;
 		esac
@@ -418,6 +421,7 @@ wanted = {
     "installer": ("install.sh", "0755"),
     "verifier": ("verify.sh", "0755"),
     "backup-script": ("backup.sh", "0755"),
+    "docker-prereq": ("docker-prereq.sh", "0755"),
     "template-pala-env": ("templates/pala.env.tmpl", "0644"),
     "template-postgres-env": ("templates/postgres.env.tmpl", "0644"),
     "template-palactf-service": ("templates/palactf.service", "0644"),
@@ -505,7 +509,7 @@ for entry in artifacts:
         selected[name] = entry
 
 for name, (path, mode) in wanted.items():
-    if name not in selected:
+    if name != "docker-prereq" and name not in selected:
         fail(f"signed manifest does not list the {name} artifact")
 
 by_path = {entry["path"]: (name, entry) for name, entry in selected.items()}
@@ -589,9 +593,17 @@ if [ "$DOWNLOAD_ONLY" -eq 1 ]; then
 	exit 0
 fi
 
+PREREQ_ARGS=()
+for arg in "${INSTALL_ARGS[@]}"; do
+	if [ "$arg" = --install-docker ]; then
+		[ -f "$HELPERS/docker-prereq.sh" ] ||
+			die "--install-docker requires a docker-prereq.sh authenticated by the signed manifest"
+		PREREQ_ARGS=(--docker-prereq "$HELPERS/docker-prereq.sh")
+		break
+	fi
+done
+
 note "running the verified bundled installer"
-if [ "${#INSTALL_ARGS[@]}" -gt 0 ]; then
-	"$HELPERS/install.sh" --bundle "$BUNDLE" --pubkey "$PUBKEY" "${INSTALL_ARGS[@]}"
-else
-	"$HELPERS/install.sh" --bundle "$BUNDLE" --pubkey "$PUBKEY"
-fi
+env -u PALACTF_BINARY -u PALACTF_SHA256 -u PALACTF_BUNDLE -u PALACTF_PUBKEY -u PALACTF_VERSION \
+	"$HELPERS/install.sh" --bundle "$BUNDLE" --pubkey "$PUBKEY" \
+	"${PREREQ_ARGS[@]}" "${INSTALL_ARGS[@]}"
