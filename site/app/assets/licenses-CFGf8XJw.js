@@ -1,5 +1,5 @@
 /* pala-bundle:pages */
-import{g as p,d as m,u as L,r as h,j as e,L as N}from"./react-CmW-b7xC.js";import{b as A}from"./ui-rSWEhugN.js";import{z as g,am as i,j as S,f as b,H,an as y}from"./index-DQE52rw2.js";import{s as l,b5 as C,i as w,l as F,a4 as D}from"./icons-CHOsOITP.js";import"./query-BQmBXl8e.js";import"./radix-DH3WrAHm.js";const R=[{key:"go-direct",label:"后端直接依赖",note:"随 pala 二进制分发，许可证正文取自各模块的 LICENSE 文件。",items:[{name:"github.com/coder/websocket",version:"v1.8.13",license:"ISC",usage:"WebSocket 升级与心跳（`/api/v1/ws`）",file:"LICENSE.txt",text:`Copyright (c) 2023 Anmol Sethi <hi@nhooyr.io>
+import{g as p,d as m,u as L,r as h,j as e,L as N}from"./react-CmW-b7xC.js";import{b as A}from"./ui-rSWEhugN.js";import{z as g,am as i,j as S,f as b,H,an as y}from"./index-Ca953wWJ.js";import{s as l,b5 as C,i as w,l as F,a4 as D}from"./icons-CHOsOITP.js";import"./query-BQmBXl8e.js";import"./radix-DH3WrAHm.js";const R=[{key:"go-direct",label:"后端直接依赖",note:"随 pala 二进制分发，许可证正文取自各模块的 LICENSE 文件。",items:[{name:"github.com/coder/websocket",version:"v1.8.13",license:"ISC",usage:"WebSocket 升级与心跳（`/api/v1/ws`）",file:"LICENSE.txt",text:`Copyright (c) 2023 Anmol Sethi <hi@nhooyr.io>
 
 Permission to use, copy, modify, and distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
